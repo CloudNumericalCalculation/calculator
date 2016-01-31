@@ -1,7 +1,8 @@
-import os
+#coding: utf-8
+import sys
 import math
 try:
-	expression = raw_input()
+	expression = input()['expression']
 	expression = expression.replace("^", "**");
 	expression = expression.replace("and", "&");
 	expression = expression.replace("xor", "^");
@@ -21,7 +22,8 @@ try:
 	expression = expression.replace("log", "math.log10");
 	expression = expression.replace("ln", "math.log");
 	expression = eval(expression)
-	print expression
-	os._exit(0)
 except:
-	os._exit(1)
+	print '请输入正确的表达式'
+	sys.exit(1)
+print expression
+sys.exit(0)
