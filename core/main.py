@@ -1,7 +1,7 @@
 #coding: utf-8
+from __future__ import division
 import sys
 import math
-from __future__ import division
 try:
 	expression = input()['expression']
 	expression = expression.replace("^", "**");
